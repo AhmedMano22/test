@@ -1,0 +1,49 @@
+
+[
+  {
+    "ID":"FirstName",
+    "Label":"First Name",
+    "Type":"input",
+    "Value":"",
+    "placeholder":"Enter First Name",
+    "Required":"true"
+  },
+  {
+    "ID":"LastName",
+    "Label":"Last Name",
+    "Type":"input",
+    "Value":"",
+    "placeholder":"Enter Last Name",
+    "Required":"true"
+  },
+  {
+    "ID":"Email",
+    "Label":"Email",
+    "Type":"input",
+    "Value":"",
+    "placeholder":"Enter Email",
+    "Required":"true"
+  },
+  {
+    "ID":"DOB",
+    "Label":"DOB",
+    "Type":"date",
+    "Value":"",
+    "Required":"true"
+  },
+  {
+    "ID":"Gender",
+    "Label":"Gender",
+    "Type":"radio",
+    "Value":"Male,Female",
+    "Required":"true"
+  }
+  ,
+  {
+    "ID":"City",
+    "Label":"City",
+    "Type":"select",
+    "Value":"assuit,cairo,sohag,kena",
+    "Required":"true"
+  }
+]

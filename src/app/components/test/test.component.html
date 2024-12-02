@@ -1,0 +1,160 @@
+
+
+  <!-- <div class=" col-6">
+      <div class="mb-3">
+        <label for="val1" class="form-label">value1</label>
+        <input type="text" class="form-control" [(ngModel)]="selectedDate1"  (blur)="saveData()"  id="val1" placeholder="value1">
+      </div>
+    </div>
+    <div class=" col-6">
+      <div class="mb-3">
+        <label for="val2" class="form-label">value2</label>
+        <input type="text" class="form-control" [(ngModel)]="selectedDate2"  (blur)="saveData()"  id="val2" placeholder="value2">
+      </div>
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-primary" (click)="reset()">Add new </button>
+    </div>
+    <div *ngFor="let item of dataArray">
+      <p>{{ item.value1 }} - {{ item.value2 }}</p>
+    </div> -->
+
+    <!-- <circle-progress
+        [percent]="85"
+        [radius]="100"
+        [outerStrokeWidth]="4"
+        [innerStrokeWidth]="2"
+        [outerStrokeColor]="'#808080'"
+        [innerStrokeColor]="'#e7e8ea'"
+        [animation]="true"
+        [animationDuration]="300">
+    </circle-progress>
+    <div class="d-flex justify-content-center">
+      <div class="user-image2">
+        <div class="progress-circle" [style.width.%]="progressPercent">
+        </div>
+        <span class="progress-number">{{ progressPercent }}</span>
+        <img src="assets/images/tutor1.png" alt="">
+      </div>
+    </div> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="d-flex justify-content-center mt-5">
+
+          <div>
+            <form [formGroup]="form" >
+              <div class="form-group">
+                <label for="input1">Input 1:</label>
+                <input type="number" id="input1" formControlName="input1" class="form-control">
+                <div *ngIf="form.get('input1')?.invalid && (form.get('input1')?.dirty || form.get('input1')?.touched)" class="text-danger">
+                  Input 1 is required
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="input2">Input 2:</label>
+                <input type="number" id="input2" formControlName="input2" class="form-control">
+                <div *ngIf="form.get('input2')?.invalid && (form.get('input2')?.dirty || form.get('input2')?.touched)" class="text-danger">
+                  Input 2 is required
+                </div>
+              </div>
+              <button type="submit" [disabled]="form.invalid" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+
+
+        <div class="d-flex justify-content-center mt-5">
+          <div class="user-image2">
+            <circle-progress class="circl"
+              [percent]="progressPercent"
+              [radius]="55"
+              [outerStrokeWidth]="2"
+              [innerStrokeWidth]="1"
+              [outerStrokeColor]="'#3361FF'"
+              [innerStrokeColor]="'#DADEE6'"
+              [animation]="true"
+              [animationDuration]="300"
+            ></circle-progress>
+            <span class="progress-number">{{ progressPercent }}%</span>
+            <img src="assets/images/tutor1.png" alt="">
+          </div>
+        </div>
+
+
+        </div>
+      </div>
+    </div> -->
+
+<!-- <div class="container " style="margin-top: 100px;">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-body">
+        <div id="area-spaline">
+        <apx-chart
+          [chart]="areaSpalineChart.chart"
+          [dataLabels]="areaSpalineChart.dataLabels"
+          [stroke]="areaSpalineChart.stroke"
+          [series]="areaSpalineChart.series"
+          [xaxis]="areaSpalineChart.xaxis"
+          [colors]="areaSpalineChart.colors"
+
+          [fill]="areaSpalineChart.tooltip">
+          </apx-chart>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container mt-5">
+  <form [formGroup]="testform" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" class="form-control" formControlName="name" />
+
+    </div>
+    <div class="form-group">
+      <label for="phone">phone</label>
+      <input id="phone" class="form-control" formControlName="phone" />
+
+    </div>
+
+
+    <button class="btn btn-primary mt-4" type="submit" >Submit</button>
+  </form>
+</div> -->
+<div class="d-flex justify-content-center">
+  <div class="form-group col-md-4">
+    <label for="inputAddress">Name</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Name"
+        [(ngModel)]="qrCodeData.name" name="name" required #name="ngModel">
+    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+        <div style="color: red;" *ngIf="name.errors?.['required']">
+            Please Enter Name
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <div class="form-group col-md-4">
+    <label for="inputAddress">Phone</label>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Phone"
+        [(ngModel)]="qrCodeData.Phone" name="Phone" required #Phone="ngModel">
+    <div *ngIf="Phone.invalid && (Phone.dirty || Phone.touched)" class="alert">
+        <div style="color: red;" *ngIf="Phone.errors?.['required']">
+            Please Enter Phone
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center">
+  <button type="submit" class="btn btn-success" (click)="QRCode()">Add / QR Code</button>
+</div>
+
+<ngx-qrcode id="qrcode1" #qrcode
+  [elementType]="elementType"
+  [errorCorrectionLevel]="correctionLevel"
+  [width]="512"
+  [value]="value"
+  cssClass="bshadow"></ngx-qrcode>

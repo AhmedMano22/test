@@ -1,0 +1,16 @@
+section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#form .row .col-md-12 div{
+  margin: 5px 10px !important;
+}
+#form .row {
+  width: 600px;
+  margin: auto;
+}
+button{
+  margin: 5px 10px;
+}

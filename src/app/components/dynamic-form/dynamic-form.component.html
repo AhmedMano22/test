@@ -1,0 +1,76 @@
+<section>
+    <form id="form" [formGroup]="registerForm" (submit)="submit()">
+      <div class="row form" [dragula]='"bag-dynamicForm"' [dragulaModel]='dynamicForm'>
+        <div class="col-md-12" *ngFor="let control of dynamicForm">
+          <div [ngSwitch]="control.Type">
+            <div *ngSwitchCase="'input'" class="row">
+
+             <div class="col-md-4">
+                <label>{{control.Label}}</label>
+              </div>
+              <div class="col-md-6">
+                <input type="text" [formControlName]="control.ID" class="form-control"
+                  [placeholder]="control.placeholder">
+
+                <div *ngIf="registerForm.get(control.ID)?.dirty || registerForm.get(control.ID)?.touched  ">
+                  <small *ngIf="!registerForm.get(control.ID)?.valid">
+                    {{control.Label}} is Required
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="'date'" class="row">
+              <div class="col-md-4">
+                <label>{{control.Label}}</label>
+              </div>
+              <div class="col-md-6">
+                <input type="date" class="form-control" [formControlName]="control.ID">
+                <div *ngIf="registerForm.get(control.ID)?.dirty || registerForm.get(control.ID)?.touched  ">
+                  <small *ngIf="!registerForm.get(control.ID)?.valid">
+                    {{control.Label}} is Required
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="'radio'" class="row">
+              <div class="col-md-4">
+                <label>{{control.Label}}</label>
+              </div>
+              <div class="col-md-6">
+                <label class="radio me-2" *ngFor="let val of control.Value.split(',')">
+                  <input type="radio" name="{{control.ID}}" value="{{val}}" [formControlName]="control.ID">
+                  {{val}}
+                </label>
+                <div *ngIf="registerForm.get(control.ID)?.dirty || registerForm.get(control.ID)?.touched  ">
+                  <small *ngIf="!registerForm.get(control.ID)?.valid">
+                    {{control.Label}} is Required
+                  </small>
+                </div>
+              </div>
+            </div>
+            <div *ngSwitchCase="'select'" class="row">
+              <div class="col-md-4">
+                <label>{{control.Label}}</label>
+              </div>
+              <div class="col-md-6">
+                <select class="form-control" [formControlName]="control.ID">
+                  <option value="">select city</option>
+                  <option *ngFor="let val of control.Value.split(',')" value="{{val}}">{{val}}</option>
+                </select>
+                <div *ngIf="registerForm.get(control.ID)?.dirty || registerForm.get(control.ID)?.touched  ">
+                  <small *ngIf="!registerForm.get(control.ID)?.valid">
+                    {{control.Label}} is Required
+                  </small>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3">
+        <button type="submit" [disabled]="registerForm.invalid" class="btn btn-success w-50">Submit</button>
+      </div>
+    </form>
+</section>

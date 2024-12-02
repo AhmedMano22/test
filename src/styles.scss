@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+@import "ngx-toastr/toastr";
+@import "../node_modules/angular-calendar/css/angular-calendar.css";
+// @import 'https://source.zoom.us/2.12.2/css/bootstrab.css';
+// @import 'https://source.zoom.us/2.12.2/css/react.select.css';
+
+#zmmtg-root {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+//  background-color:#1d1e2669 !important;
+
+
+}
+@media (max-width:580px) {
+  .page-header{
+      margin-top: 0 !important;
+      padding-bottom: 0 !important;
+  }
+}
+
+
+
+#wc-container-right{
+  margin-top: 15px;
+}
+.mini-layout-body-title{
+  margin: 0 !important
+}
+.chat-header__dropdown-menu ,.participants-header__dropdown-menu  {
+  right: 0 !important;
+  min-width:130px !important;
+}
+.chat-container__chat-control {
+  align-items: center !important;
+  height: 55px !important;
+}
+.chat-more-options__chat-control-more {
+  margin: 10px !important;
+  display: flex;
+  align-items: center;
+}
+.chat-more-options__chat-control-more:focus {
+  outline:none !important;
+
+}
+.wrapper .open .ax-outline-blue-important:focus {
+  outline:none !important;
+}
+.chat-container__emoji-reaction {
+  top: 0px !important;
+}
+.chat-receiver-list__to-text {
+
+  margin-left: 5px !important;
+}
+.meeting-info-icon__info-row{
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  margin: 10px 0 15px 5px;
+}
+.meeting-info-icon__meeting-url:first-child{
+  width: 0 !important;
+}
+.dropdown-toggle::after {
+display: none !important;
+}
+.i-margin {
+  margin-right: 0 !important;
+}
+.zm-modal .zm-modal-footer-body-checkbox {
+ display: flex !important;
+ justify-content: center !important;
+}
+.zm-modal .zm-modal-footer-default{
+  justify-content: center !important;
+}
+.zm-modal .zm-modal-footer-default-actions{
+  margin-left: 0 !important;
+}
+.chat-receiver-list__menu .dropdown-menu{
+  left: -79px !important;
+}
+.disclaimer__button-wrap{
+  margin-bottom: 27px;
+}
+.zm-modal .zm-modal-body-title{
+  text-align: center !important;
+}
+.zm-radio-group__header{
+  font-size: 15px !important;
+  text-align: end !important;
+}
+.zm-radio-group__list--vertical>div:first-child {
+  text-align: end !important;
+}
+.zm-radio-button{
+text-align: end !important;
+}
+.zm-modal .zm-modal-body-content{
+  padding: 8px 13px 0px 0px !important;
+  text-align: start;
+}
+.zm-modal-body{
+  direction: ltr !important;
+}
+.dialog-share-container .zm-modal-body{
+  padding: 8px 13px 0px 0px !important;
+  direction: rtl !important;
+
+}
+.join-dialog__tabs .zmu-tabs__tab-container .zmu-tabs__tabs-list .zmu-tabs__tab-bar .tab-bar-node__icon {
+  margin-left: 12px !important;
+}
